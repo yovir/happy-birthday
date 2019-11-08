@@ -167,7 +167,8 @@ const animationTimeline = () => {
         ease: Expo.easeOut
       },
       0.2,
-      "+=1"
+      "+=1",
+      "currentStep"
     )
     .staggerFromTo(
       ".baloons img",
@@ -199,6 +200,10 @@ const animationTimeline = () => {
       y: 350,
       rotation: -180,
       opacity: 0
+    })
+    .to(".hat", 0.3, {
+      rotation: 30,
+      x: 100
     })
     .staggerFrom(
       ".wish-hbd span",
@@ -266,7 +271,8 @@ const animationTimeline = () => {
       "+=1"
     );
 
-  // tl.seek("currentStep");
+  // tl.seek(40);
+  // tl.pause()
   // tl.timeScale(2);
 
   // Restart Animation on click
